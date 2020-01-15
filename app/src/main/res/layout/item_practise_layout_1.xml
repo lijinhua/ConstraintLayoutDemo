@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_avatar"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="H,1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        fresco:fadeDuration="250"
+        fresco:roundAsCircle="true" />
+
+    <com.zhouyou.cllayout.view.BalanceTextLayout
+        android:id="@+id/balance_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+        app:layout_constraintRight_toLeftOf="@+id/iv_close"
+        app:layout_goneMarginLeft="65dp">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="郭峰sfdsfsdfsfdsfdsffdssfsdfsffsfsdf"
+            android:textColor="@color/color_484848"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_info" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="3年 本科 10k-11k"
+            android:textColor="@color/color_aaaaaa"
+            android:textSize="14dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_name"
+            app:layout_constraintLeft_toRightOf="@+id/tv_user_name"
+            app:layout_constraintRight_toRightOf="parent" />
+    </com.zhouyou.cllayout.view.BalanceTextLayout>
+
+    <TextView
+        android:id="@+id/tv_info_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="期望职位 java"
+        android:textColor="@color/color_484848"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="@+id/balance_layout"
+        app:layout_constraintLeft_toRightOf="@+id/iv_avatar"
+        app:layout_constraintRight_toLeftOf="@+id/iv_close"
+        app:layout_constraintTop_toBottomOf="@+id/balance_layout" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="7dip"
+        android:maxLines="2"
+        android:text="追求完美，思维缜密，喜欢与人交流，慢性子，稳扎稳打！ "
+        android:textColor="@color/color_aaaaaa"
+        android:textSize="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        app:layout_goneMarginTop="60dp" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@mipmap/ic_close"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
